@@ -1,0 +1,10 @@
+/* pages/address/index.wxss */
+.myPage{
+  padding: 10rpx;
+}
+.flexBox{
+  display: flex;
+}
+.flexOne{
+  flex: 1;
+}

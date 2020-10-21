@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<!-- 顶部的定位 以及搜索框 -->
+<view>
+    <!-- <van-row gutter="2">
+        <van-col span="8" custom-class="dark">
+			杭州市
+		</van-col>
+        <van-col span="16" custom-class="dark">search</van-col>
+    </van-row> -->
+    <!-- 类别 -->
+    <van-row gutter="2" class="index-top">
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{zc}}" />
+    		<view class="text">早餐</view>
+		</van-col>
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{wc}}" />
+    		<view class="text">午餐</view>
+		</van-col>
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{zhc}}" />
+    		<view class="text">中餐</view>
+		</van-col>
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{xc}}" />
+    		<view class="text">西餐</view>
+		</van-col>
+    </van-row>
+    <van-row gutter="2">
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{ms}}" />
+    		<view class="text">美食</view>
+		</van-col>
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{sg}}" />
+    		<view class="text">水果</view>
+		</van-col>
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{xwc}}" />
+    		<view class="text">下午茶</view>
+		</van-col>
+        <van-col span="6" custom-class="dark">
+			<image class="type_logo" src="{{bld}}" />
+    		<view class="text">超市便利</view>
+		</van-col>
+    </van-row>
+	<van-row gutter="2" class="index-shop-title">
+		<van-col span="24" custom-class="fjsj">
+			<view class="text">———— <text>附近商家</text> ————</view>
+		</van-col>
+	</van-row>
+    <van-row gutter="2" wx:if="{{allPro.length>0}}">
+		<van-col span="24" custom-class="" wx:for-items="{{allPro}}" wx:key="id">
+            <navigator
+                url="{{merchantDetailUrl}}?merchantId=123&merchantName=青花椒（砂锅鱼）">
+                    <van-card 
+                        title="{{item.title}}" 
+                        desc="起送￥20 | 配送￥6 | 35分钟" 
+                        num="" price="1.3km" 
+                        thumb="{{ item.cover_url }}">
+                    <view slot="tags">
+                        <van-tag plain type="danger">满20减5</van-tag>
+                        <van-tag plain type="danger">满30减8</van-tag>
+                    </view>
+					<view slot="tags">
+                        <van-tag mark type="primary">高分商家</van-tag>
+                        <van-tag mark type="success">蜂鸟专送</van-tag>
+                        <van-tag mark>极速退款</van-tag>
+                    </view>
+                </van-card>
+            </navigator>
+        </van-col>
+        
+    </van-row>
+    <!-- <view class='shop_Box' wx:if="{{allPro.length>0}}">
+        <view class='shopBox' wx:for-items="{{allPro}}" wx:key="{{item.id}}">
+            <view class='shopImg'>
+                <image src='{{item.cover_url}}' />
+            </view>
+            <view class='shopName'>asda{{item.title}}</view>
+            <view class='shopMessage'>
+                <view class='shops'>
+                    <text class='shopPrice'>￥{{item.price}}</text>
+                    <text class='markPrice'>￥{{item.markPrice}}</text>
+                </view>
+            </view>
+        </view>
+    </view> -->
+
+</view>

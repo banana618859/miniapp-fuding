@@ -1,0 +1,8 @@
+
+.van-card__content {
+    padding: 10%;
+}
+
+.row-cell {
+    padding-top: 10px;
+}

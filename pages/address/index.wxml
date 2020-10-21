@@ -1,0 +1,17 @@
+<!--pages/address/index.wxml-->
+<view class="myPage">
+    <view class="flexBox" style="margin-top: 10rpx; height: 120rpx; background: #eee; border-radius: 10rpx;">
+    <view class="flexOne" style="padding: 8rpx 16rpx;">
+      <view style="font-weight: 600;">张三 13631338859</view>
+      <view>广州市天河区柯木塱地铁站...</view>
+    </view>
+    <view style="padding: 0 10rpx; line-height:120rpx;">
+      编辑
+    </view>
+  </view>
+</view>
+
+<view class="address_btn">
+     <button bindtap = "getRealAddress" type="primary">添加收获地址</button>    
+</view>
+

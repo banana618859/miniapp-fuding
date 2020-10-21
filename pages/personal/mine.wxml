@@ -1,0 +1,34 @@
+<!--pages/personal/mine.wxml-->
+<van-row class="custom-class" gutter="2">
+    <van-col span="24">
+        <!-- 用户为授权 -->
+        <button wx:if="{{!hasAuthorize}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+            <van-card title="未登录，点击登录" desc="独乐了不如众乐乐" thumb="{{ imageUrl }}" centered="{{true}}">
+
+            </van-card>
+        </button>
+        <!-- 已授权，未绑定手机 -->
+        <navigator wx:if="{{hasAuthorize && !hasMobile}}" url="{{toBindMobile}}">
+            <van-card title="{{wxNickName}}" desc="已授权, 点击绑定手机" thumb="{{ imageUrl }}" centered="{{true}}">
+
+            </van-card>
+        </navigator>
+        <!-- 已授权，已绑定手机 -->
+        <navigator wx:if="{{hasAuthorize && hasMobile}}">
+            <van-card title="{{wxNickName}}" desc="{{mobile}}" thumb="{{ imageUrl }}" centered="{{true}}">
+
+            </van-card>
+        </navigator>
+    </van-col>
+</van-row>
+<van-row class="custom-class" gutter="10" class="row-cell">
+    <van-col span="24">
+        <van-cell-group border="{{false}}">
+            <van-cell title="我的地址" bindtap="gotoAddress" icon="location" is-link />
+            <van-cell title="我的红包" icon="location" is-link />
+            <van-cell title="客服中心" icon="location" is-link />
+            <van-cell title="帮助和反馈" icon="location" is-link />
+            <van-cell title="协议说明" icon="location" is-link />
+        </van-cell-group>
+    </van-col>
+</van-row>
