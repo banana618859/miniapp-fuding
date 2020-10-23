@@ -1,9 +1,14 @@
 <import src = "../../common/menuPage.wxml"/>
 <!--pages/index/detail/merchantDetail.wxml-->
-<!-- <view class="merchant_detail_container">
-    
-</view> -->
-<!-- 顶部商户信息 -->
+<!-- <view class="merchant_detail_container"> </view>-->
+
+<view style="padding: 20rpx;">
+  
+  <view class="header">
+    <view class="h50">店铺名称</view>
+    <view class="h20">店铺介绍店铺地址店铺人流</view>
+	</view>
+	
 	<van-row>
 		<van-col span="24">
 			<van-tabs active="{{ tab_active }}" bind:change="onChange" class="head">
@@ -21,24 +26,36 @@
 					<template is="menuPage" data="{{leftToTop, currentLeftSelect, toView, constants, imageUrl}}"/>
 				</swiper-item>
 				<!-- 评价页面 -->
-				<swiper-item id="commonPage">2
-					<!-- <template is="commonPage" data="{{menu,selected,howMuch,cost,pullBar}}"/> -->
+				<swiper-item id="commonPage">
+					<template is="commonPage" data="{{menu,selected,howMuch,cost,pullBar}}"/>
 				</swiper-item>
 				<!-- 商户页面 -->
-				<swiper-item id="merchantPage">3
-					<!-- <template is="merchantPage" data="{{menu,selected,howMuch,cost,pullBar}}"/> -->
+				<swiper-item id="merchantPage">
+					<template is="merchantPage" data="{{menu,selected,howMuch,cost,pullBar}}"/>
 				</swiper-item>
 			</swiper>
 		</van-col>
 	</van-row>
-	<view class="footer">
+	<!-- 
+		<view class="footer">
 		<van-cell-group>
-			<van-cell value="20元起送" icon="shop">
+			<van-cell style="padding: 0;" value="20元起送" icon="shop">
 				<view slot="title">
-					<span class="van-cell-text">￥12.8</span>
+					<span style="padding-right: 10px;">￥12.8</span>
 					<van-tag mark type="primary">配送费￥4.5</van-tag>
 					<van-tag mark type="success">蜂鸟专送</van-tag>
 				</view>
 			</van-cell>
 		</van-cell-group>
+	</view> -->
+	<view style="position:fixed; left:0; bottom:0; height:44px;padding: 5px; background: #eee; width: 100%;">
+		<view style="background:#ccc;border-radius: 20px; width: 100px;position: absolute; right:5px; top:5px; text-align: center; height:34px; line-height: 34px;">结算</view>
+		<view style="width: 40px;margin-top: 3px; float: left;">
+			<image style="width: 30px; height: 30px;" mode="{{item.mode}}" src="../../../images/icon/cart.png"></image>
+		</view>
+		<view style="width: 150px; font-size: 12px;margin-top: 3px;">
+			<text>15元起送\n美团配送</text>
+		</view>
+		
 	</view>
+</view>

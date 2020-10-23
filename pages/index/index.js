@@ -4,12 +4,59 @@ const app = getApp()
 
 Page({
 	data: {
-        allPro: [],
 		motto: 'Hello World',
 		userInfo: {},
 		hasUserInfo: false,
-        merchantDetailUrl: "detail/merchantDetail",
-		canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        shopUrl: "detail/merchantDetail",
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        allPro: [
+            {
+                title: '百佳旺',
+                images: '/images/logo.jpg',
+                distance: 5,
+                deliveryTime: 30
+            },
+            {
+                title: '天藓水果',
+                images: '/images/category/bld.png',
+                distance: 5.6,
+                deliveryTime: 35
+            },{
+                title: '美意蛋糕',
+                images: '/images/category/ms.png',
+                distance: 7.1,
+                deliveryTime: 42
+            }
+            ,{
+                title: '刘源螺蛳粉',
+                images: '/images/category/wc.png',
+                distance: 7.3,
+                deliveryTime: 44
+            },
+            {
+                title: '茵茵甜品',
+                images: '/images/category/xc.png',
+                distance: 8.0,
+                deliveryTime: 47
+            },
+            {
+                title: '百果园',
+                images: '/images/category/xwc.png',
+                distance: 8.1,
+                deliveryTime: 48
+            },{
+                title: '创意蛋糕',
+                images: '/images/category/zc.png',
+                distance: 8.5,
+                deliveryTime: 53
+            }
+            ,{
+                title: '回头火锅店',
+                images: '/images/category/zhc.png',
+                distance: 8.8,
+                deliveryTime: 55
+            }
+        ],
         imageUrl: '/images/logo.jpg',
 		imageUrl0: '/images/logo0.jpg',
 		bld: '/images/category/bld.png',
@@ -76,7 +123,7 @@ Page({
     getData: function(){
         let that = this;
         wx.request({
-            url:'https://book.feelyou.top/search/%E9%9B%AA%E6%BC%A0',
+            url:'https://api.apiopen.top/todayVideo',
             data: {},
             method: 'GET',
             header: { 'content-Type': 'application/json' },
@@ -84,9 +131,9 @@ Page({
             console.log('getData:',res)
             if (res.statusCode == 200) {
                 console.log(res.data);
-                that.setData({
-                    allPro: res.data
-                });
+                // that.setData({
+                //     allPro: res.data.result
+                // });
             }
             }
         })

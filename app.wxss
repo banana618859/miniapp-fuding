@@ -4,7 +4,9 @@
 page{
     /* background-color: #E6E6E6; */
 }
-
+view{
+    box-sizing: border-box;
+}
 .container {
     height: 100%;
     display: flex;
@@ -14,3 +16,7 @@ page{
     padding: 200rpx 0;
     box-sizing: border-box;
 } 
+.h20{
+    height: 40rpx; line-height: 40rpx;
+    font-size: 24rpx;
+}

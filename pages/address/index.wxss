@@ -1,6 +1,6 @@
 /* pages/address/index.wxss */
 .myPage{
-  padding: 10rpx;
+  padding: 20rpx;
 }
 .flexBox{
   display: flex;

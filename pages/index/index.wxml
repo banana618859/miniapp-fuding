@@ -52,12 +52,12 @@
     <van-row gutter="2" wx:if="{{allPro.length>0}}">
 		<van-col span="24" custom-class="" wx:for-items="{{allPro}}" wx:key="id">
             <navigator
-                url="{{merchantDetailUrl}}?merchantId=123&merchantName=青花椒（砂锅鱼）">
+                url="{{shopUrl}}?merchantId=123&merchantName=青花椒（砂锅鱼）">
                     <van-card 
                         title="{{item.title}}" 
-                        desc="起送￥20 | 配送￥6 | 35分钟" 
-                        num="" price="1.3km" 
-                        thumb="{{ item.cover_url }}">
+                        desc="起送￥20 | 配送￥6 | {{item.deliveryTime}}分钟" 
+                        num="" price="{{item.distance}}km" 
+                        thumb="{{ item.images }}">
                     <view slot="tags">
                         <van-tag plain type="danger">满20减5</van-tag>
                         <van-tag plain type="danger">满30减8</van-tag>
