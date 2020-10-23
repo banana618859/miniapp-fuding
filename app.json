@@ -22,7 +22,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "DEMO小程序",
+    "navigationBarTitleText": "页面",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {

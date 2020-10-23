@@ -59,7 +59,7 @@
 		</van-col>
     </van-row>
     
-    <template is="foodList" data="{{allPro}}"/>
+    <template is="foodList" data="{{allPro, shopUrl}}"/>
 
     <!-- <view class='shop_Box' wx:if="{{allPro.length>0}}">
         <view class='shopBox' wx:for-items="{{allPro}}" wx:key="{{item.id}}">
