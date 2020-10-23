@@ -1,0 +1,2 @@
+/* pages/search/index.wxss */
+@import "/dist/common/index.wxss";

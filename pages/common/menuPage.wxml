@@ -1,3 +1,30 @@
+<template name="foodList">
+	<van-row gutter="2" wx:if="{{allPro.length>0}}">
+		<van-col span="24" custom-class="" wx:for-items="{{allPro}}" wx:key="id">
+            <navigator
+                url="{{shopUrl}}?merchantId=123&merchantName=青花椒（砂锅鱼）">
+                    <van-card 
+                        title="{{item.title}}" 
+                        desc="起送￥20 | 配送￥6 | {{item.deliveryTime}}分钟" 
+                        num="" price="{{item.distance}}km" 
+                        thumb="{{ item.images }}">
+                    <view slot="tags">
+                        <van-tag plain type="danger">满20减5</van-tag>
+                        <van-tag plain type="danger">满30减8</van-tag>
+                    </view>
+					<view slot="tags">
+                        <van-tag mark type="primary">高分商家</van-tag>
+                        <van-tag mark type="success">蜂鸟专送</van-tag>
+                        <van-tag mark>极速退款</van-tag>
+                    </view>
+                </van-card>
+            </navigator>
+        </van-col>
+        
+    </van-row>
+</template>
+
+
 <template name="menuPage">
 <view class="menuPage">
 
