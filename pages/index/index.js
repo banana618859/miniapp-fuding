@@ -120,6 +120,12 @@ Page({
         //     })
 		// }
     },
+    gotoSearchPage(){
+        var newAllPro = JSON.stringify(this.data.allPro) 
+        wx.navigateTo({
+          url: '/pages/search/index',
+        })
+    },
     getData: function(){
         let that = this;
         wx.request({
