@@ -9,7 +9,19 @@ Page({
 	data: {
 
 	},
-
+	sureBind: function(){
+		wx.showToast({
+			title: '绑定成功',
+			icon: 'success',
+			duration: 2000
+		});
+		// 返回上一页
+		setTimeout(()=>{
+			wx.navigateBack({
+				delta: 1
+			})
+		},2500)
+	},
 	formSubmit: function(e) {
 		console.log(e);
 		

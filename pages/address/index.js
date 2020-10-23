@@ -7,7 +7,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    allAddress:[
+      {
+        id:1,
+        name: '何柳',
+        phone: '13631338859',
+        address: '广州市天河区柯木塱地铁站...'
+      },
+      {
+        id: 2,
+        name: '何柳',
+        phone: '13631338859',
+        address: '广州市黄埔区甜梦创意园...'
+      }
+    ]
   },
 
   /**
@@ -23,6 +36,13 @@ Page({
     this.getData()
     wx.setNavigationBarTitle({
       title: '收货地址'
+    })
+  },
+  gotoEditAddress: function(e){
+    var obj = JSON.stringify(e.target.dataset);
+    console.log('gotoEditAddress',e,obj)
+    wx.navigateTo({
+      url: '/pages/addressEdit/index?obj='+ obj
     })
   },
   getData: function(){

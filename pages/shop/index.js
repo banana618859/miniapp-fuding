@@ -1,6 +1,6 @@
 // pages/index/detail/merchantDetail.js
 
-const constants = require('../../../utils/constants.js');
+const constants = require('../../utils/constants.js');
 
 const RIGHT_BAR_HEIGHT = 20;      // 右侧每一类的 bar 的高度（固定）
 const RIGHT_ITEM_HEIGHT = 60;     // 右侧每个子类的高度（固定）
@@ -123,32 +123,32 @@ Page({
      */
     onLoad: function (options) {
         
-		this.getSystemInfo();
+		// this.getSystemInfo();
 
-		let lh = windowHeight;
+		// let lh = windowHeight;
 
 		// debugger;
 
-		if (((constants.length - 1) * LEFT_ITEM_HEIGHT) > lh) {
-			lh = (constants.length - 1) * LEFT_ITEM_HEIGHT;
-		}
+		// if (((constants.length - 1) * LEFT_ITEM_HEIGHT) > lh) {
+		// 	lh = (constants.length - 1) * LEFT_ITEM_HEIGHT;
+		// }
 
-		this.setData({
-			constants: constants,
-			currentLeftSelect: constants[0].id,
-			eachRightItemToTop: this.getEachRightItemToTop(),
-			leftHeight: lh+90
-		})
+		// this.setData({
+		// 	constants: constants,
+		// 	currentLeftSelect: constants[0].id,
+		// 	eachRightItemToTop: this.getEachRightItemToTop(),
+		// 	leftHeight: lh+90
+		// })
 
-        wx.setNavigationBarTitle({
-            title: options.merchantName,
-            success: function () {
-                console.log("当前微信小程序的页面标题为\"" + options.merchantName + "\"");
-            },
-            complete: function () {
-                console.log("动态修改微信小程序的页面标题-complete");
-            }
-        });
+    //     wx.setNavigationBarTitle({
+    //         title: options.merchantName,
+    //         success: function () {
+    //             console.log("当前微信小程序的页面标题为\"" + options.merchantName + "\"");
+    //         },
+    //         complete: function () {
+    //             console.log("动态修改微信小程序的页面标题-complete");
+    //         }
+    //     });
     },
 	onChange: function(event) {
 		console.log(event);

@@ -1,0 +1,9 @@
+/* pages/addressEdit/index.wxss */
+page{
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.van-cell__title  {
+  max-width:70px;
+  min-width:70px;
+}

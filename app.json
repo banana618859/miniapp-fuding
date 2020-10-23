@@ -2,12 +2,16 @@
   "pages": [
     
     "pages/index/index",
+    
     "pages/index/detail/merchantDetail",
     "pages/logs/logs",
     "pages/order/order",
     "pages/personal/mine",
     "pages/address/index",
-    "pages/personal/bindMobile/bindMobile"
+    "pages/addressEdit/index",
+    "pages/load/index",
+    "pages/personal/bindMobile/bindMobile",
+    "pages/template/template"
   ],
   "permission":{
     "scope.userLocation":{

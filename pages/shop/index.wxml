@@ -1,0 +1,50 @@
+<!--pages/shop/index.wxml-->
+<import src = "../common/menuPage.wxml"/>
+<view style="padding: 20rpx;">
+  
+  <view class="header">
+    <view class="h50">店铺名称</view>
+    <view class="h20">店铺介绍店铺地址店铺人流</view>
+  </view>
+
+  <van-row>
+		<van-col span="24">
+			<van-tabs active="{{ tab_active }}" bind:change="onChange" class="head">
+				<van-tab title="菜单"></van-tab>
+				<van-tab title="评价"></van-tab>
+				<van-tab title="商家"></van-tab>
+			</van-tabs>
+		</van-col>
+	</van-row>
+	<van-row>
+		<van-col span="24">
+			<swiper class="swiper" style='height:{{leftHeight}}px' current="{{ tab_active }}">
+				<!-- 菜单页面 -->
+				<swiper-item id="menuPage">
+					<template is="menuPage" data="{{leftToTop, currentLeftSelect, toView, constants, imageUrl}}"/>
+				</swiper-item>
+				<!-- 评价页面 -->
+				<swiper-item id="commonPage">2
+					<!-- <template is="commonPage" data="{{menu,selected,howMuch,cost,pullBar}}"/> -->
+				</swiper-item>
+				<!-- 商户页面 -->
+				<swiper-item id="merchantPage">3
+					<!-- <template is="merchantPage" data="{{menu,selected,howMuch,cost,pullBar}}"/> -->
+				</swiper-item>
+			</swiper>
+		</van-col>
+	</van-row>
+	<view class="footer">
+		<van-cell-group>
+			<van-cell value="20元起送" icon="shop">
+				<view slot="title">
+					<span class="van-cell-text">￥12.8</span>
+					<van-tag mark type="primary">配送费￥4.5</van-tag>
+					<van-tag mark type="success">蜂鸟专送</van-tag>
+				</view>
+			</van-cell>
+		</van-cell-group>
+	</view>
+</view>
+
+

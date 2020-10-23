@@ -4,6 +4,17 @@
 	margin-top: 20px;
 } */
 
+.header{
+  height: 190rpx;
+  background: #eee;
+  padding: 20rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.h50{
+  font-size: 18px; font-weight: bold; height: 80rpx; line-height: 80rpx;
+}
+
 van-card__title {
     max-height:14px !important;
     font-size: 12px !important;
@@ -63,11 +74,6 @@ van-card__title {
 } */
 
 .head{
-  z-index: 1;
-  position: fixed;
-  top: 0rpx;
-  width:100%;
-  /* height:70rpx; */
   color:#fff;
   text-align: center;
 }
@@ -109,6 +115,7 @@ van-card__title {
   padding: 0 10rpx;
   height: 50px;
   line-height: 50px;
+  text-align: center;
 }
 
 .index-right-text {
@@ -132,8 +139,8 @@ van-card__title {
 } */
 
 .swiper swiper-item {
-	top:44px;
-	bottom: 44px;
+	top:0px;
+	bottom: 0px;
 }
 
 .index-right-text .van-card {
