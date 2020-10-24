@@ -6,10 +6,14 @@ const constants = [
 			{
 				"category_id": 1,
 				"category_name": "绿茶烤鸡ardfadfsdfs",
+				"price": 32,
+				"saleCount": 189
 			},
 			{
 				"category_id": 2,
 				"category_name": "香菜土豆丝",
+				"price": 12,
+				"saleCount": 234
 			},
 			// {
 			// 	"category_id": 3,
@@ -28,10 +32,14 @@ const constants = [
 			{
 				"category_id": 4,
 				"category_name": "石锅豆腐鸡汤",
+				"price": 32,
+				"saleCount": 54
 			},
 			{
 				"category_id": 5,
 				"category_name": "古法腊烧鸡",
+				"price": 50,
+				"saleCount": 76
 			},
 			// {
 			// 	"category_id": 6,
@@ -61,10 +69,14 @@ const constants = [
 			{
 				"category_id": 17,
 				"category_name": "鱼头豆腐汤adfs",
+				"price": 60,
+				"saleCount": 89
 			},
 			{
 				"category_id": 18,
 				"category_name": "鱼头诱惑",
+				"price": 48,
+				"saleCount": 265
 			},
 			// {
 			// 	"category_id": 19,
