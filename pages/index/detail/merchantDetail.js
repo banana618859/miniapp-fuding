@@ -14,6 +14,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+		shopName: '店铺名称',
 		imageUrl: '/images/logo0.jpg',
 		tab_active: 0,
 		badge_active:0,
@@ -122,7 +123,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        
+        console.log('options:',options)
 		this.getSystemInfo();
 
 		let lh = windowHeight;
@@ -134,6 +135,7 @@ Page({
 		}
 
 		this.setData({
+			shopName: options.merchantName,
 			constants: constants,
 			currentLeftSelect: constants[0].id,
 			eachRightItemToTop: this.getEachRightItemToTop(),
@@ -157,7 +159,7 @@ Page({
 		});
 		wx.showToast({
 			icon: 'none',
-			title: `Tab切换至第${event.detail.index}项`
+			title: `${event.detail.title}页`
 		});
 	},
 	onChangeFoodNum: function(e) {
@@ -246,6 +248,7 @@ Page({
 		}
 	},
 	jumpTo: function (e) {    // 左侧类的点击事件，点击时，右侧会滚动到对应分类
+		console.log('jumpTo:',e.target.id)
 		this.setData({
 			toView: e.target.id || e.target.dataset.id,
 			currentLeftSelect: e.target.id || e.target.dataset.id

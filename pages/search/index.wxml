@@ -1,8 +1,30 @@
 <!--pages/search/index.wxml-->
+<!-- <import src = "../common/menuPage.wxml"/> -->
 
 <view style="display:flex; height:40px; line-height:40px; border:1px solid #eee;">
   <input class="weui-input" style="flex:1;margin:5px; border-radius: 10px; font-size:14px; padding-left: 15px; line-height:30px; height:30px; background:#eee;" placeholder="请输入关键字"/>
   <view style="padding: 0 5px;">
     搜索
   </view>
+</view>
+
+<view wx:for-items="{{aallPro}}" wx:key="id">
+  <navigator
+    url="{{shopUrl}}?merchantId={{item.id}}&merchantName={{item.title}}">
+    <van-card 
+      title="{{item.title}}" 
+      desc="起送￥20 | 配送￥6 | {{item.deliveryTime}}分钟" 
+      num="" price="{{item.distance}}km" 
+      thumb="{{ item.images }}">
+      <view slot="tags">
+          <van-tag plain type="danger">满20减5</van-tag>
+          <van-tag plain type="danger">满30减8</van-tag>
+      </view>
+      <view slot="tags">
+          <van-tag mark type="primary">高分商家</van-tag>
+          <van-tag mark type="success">蜂鸟专送</van-tag>
+          <van-tag mark>极速退款</van-tag>
+      </view>
+    </van-card>
+  </navigator>
 </view>

@@ -1,4 +1,7 @@
 // pages/search/index.js
+// "van-tabs": "/dist/tabs/index"
+// "van-tabbar-item": "/dist/tabbar-item/index"
+
 Page({
 
   /**
@@ -6,54 +9,35 @@ Page({
    */
   data: {
     shopUrl: "detail/merchantDetail",
-    allPro: [
-      {
-          title: '百佳旺',
-          images: '/images/logo.jpg',
-          distance: 5,
-          deliveryTime: 30
-      },
-      {
-          title: '天藓水果',
-          images: '/images/category/bld.png',
-          distance: 5.6,
-          deliveryTime: 35
-      },{
-          title: '美意蛋糕',
-          images: '/images/category/ms.png',
-          distance: 7.1,
-          deliveryTime: 42
-      }
-      ,{
-          title: '刘源螺蛳粉',
-          images: '/images/category/wc.png',
-          distance: 7.3,
-          deliveryTime: 44
-      },
-      {
-          title: '茵茵甜品',
-          images: '/images/category/xc.png',
-          distance: 8.0,
-          deliveryTime: 47
-      },
-      {
-          title: '百果园',
-          images: '/images/category/xwc.png',
-          distance: 8.1,
-          deliveryTime: 48
-      },{
-          title: '创意蛋糕',
-          images: '/images/category/zc.png',
-          distance: 8.5,
-          deliveryTime: 53
-      }
-      ,{
-          title: '回头火锅店',
-          images: '/images/category/zhc.png',
-          distance: 8.8,
-          deliveryTime: 55
-      }
-  ],
+    aallPro: [
+        {
+            id: 1,
+            title: '百佳旺',
+            images: '/images/logo.jpg',
+            distance: 5,
+            deliveryTime: 30
+        },
+        {
+            id: 2,
+            title: '天藓水果',
+            images: '/images/category/bld.png',
+            distance: 5.6,
+            deliveryTime: 35
+        },{
+            id: 3,
+            title: '美意蛋糕',
+            images: '/images/category/ms.png',
+            distance: 7.1,
+            deliveryTime: 42
+        }
+        ,{
+            id: 4,
+            title: '刘源螺蛳粉',
+            images: '/images/category/wc.png',
+            distance: 7.3,
+            deliveryTime: 44
+        }
+    ]
   },
 
   /**
@@ -61,7 +45,7 @@ Page({
    */
   onLoad: function (options) {
     // var obj =JSON.parse(options.allPro)
-    console.log('obj加载完成')
+    console.log('obj加载完成',this.data.aallPro)
     //  testObj:本js文件中的对象
     // this.setData({
     //   allPro: obj
