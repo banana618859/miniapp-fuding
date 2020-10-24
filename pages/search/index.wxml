@@ -2,7 +2,7 @@
 <!-- <import src = "../common/menuPage.wxml"/> -->
 
 <view style="display:flex; height:40px; line-height:40px; border:1px solid #eee;">
-  <input class="weui-input" style="flex:1;margin:5px; border-radius: 10px; font-size:14px; padding-left: 15px; line-height:30px; height:30px; background:#eee;" placeholder="请输入关键字"/>
+  <input class="weui-input" style="flex:1;margin:5px; border-radius: 10px; font-size:14px; padding-left: 15px; line-height:30px; height:30px; background:#eee;" auto-focus placeholder="请输入关键字"/>
   <view style="padding: 0 5px;">
     搜索
   </view>
